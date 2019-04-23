@@ -46,25 +46,73 @@ console.log(stringCart);
 
 /////////////////////// Exercise 2 \\\\\\\\\\\\\\\\\\\\\\\\
 
-// My idea of a function
-function myFunct(){
-    console.log("my Funct")
-}
-myFunct();
+var course = {
+	name: 'JavaScript Applications',
+	awesome: true,
+	teachers: ['Assaf', 'Shane'],
+	students: [
+		{
+			name: 'Steve',
+			computer: {
+				OS: 'Linux',
+				type: 'laptop'
+			}
+		},
+		{
+			name: 'Katy',
+			computer: {
+				OS: 'OSX',
+				type: 'macbook'
+			}
+		},
+		{
+			name: 'Chuck',
+			computer: {
+				OS: 'OSX',
+				type: 'macbook'
+			}
+		}
 
-// My idea of a method 
-myMethod = function(){
-    console.log("my method")
-}
-myMethod();
+	],
+	preReqs : {
+		skills : ['html', 'css', 'git'],
+		equipment: {
+			laptop: true,
+			OSOptions: ['linux', 'osx']
+		}
+	}
+};
 
-// ES6 style function
-es6 = () => {
-    console.log("es6");
-}
-es6();
+// Assignment get values
 
-var myNum = 0;
-console.log(myNum);
-myNum++;
-console.log(myNum);
+// Name of the course ('JavaScript Applications')
+console.log(course.name);
+
+// Name of the second teacher ('Shane')
+console.log(course.teachers[1]);
+
+// Name of the first student ('Steve')
+console.log(course.students[0].name);
+
+// Katy's computer type ('macbook')
+console.log(course.students[1].computer.type);
+
+// The preReq equipment object
+console.log(course.preReqs.equipment);
+
+// The second OSOption from equipment prereqs ('osx')
+console.log(course.preReqs.equipment.OSOptions[1]);
+
+// String listing the OSOptions separated by 'or' ('linux or osx')
+var myOrString = course.preReqs.equipment.OSOptions.join(" or ");
+console.log(myOrString);
+
+// An array of all the students that are using OSX.
+var osxArray = [];
+for(var i=0; course.students.length > i; i++){
+    
+    if(course.students[i].computer.OS === "OSX"){
+        osxArray.push(course.students[i]);
+    }
+}
+console.log(osxArray);
