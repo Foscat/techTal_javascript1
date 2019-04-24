@@ -2,7 +2,7 @@
 
 // Create an array to represent your shopping list with the following items: 
 // 'pop tarts', 'ramen noodles', 'chips', 'salsa', and 'coffee'.
-var shoppingList = ["pop tarts", "ramen noodles", "chips", "salsa", "coffee"];
+var shoppingList = ["pop_tarts", "ramen_noodles", "chips", "salsa", "coffee"];
 
 // Add 'fruit loops' to the list.
 shoppingList.push("fruit loops");
@@ -24,6 +24,11 @@ var myPop = shoppingList.pop();
 var myPush = shoppingCart.push(myPop);
 console.log(shoppingList, shoppingCart);
 
+// Remove the last item from your shopping list and add it to your cart
+var myShift = shoppingList.shift();
+shoppingCart.push(myShift);
+console.log(shoppingCart, shoppingList)
+
 // Write a 'while' loop that takes items from your shopping list and moves 
 // them to your cart until there are no items left on the list.
 while(shoppingList.length >= 1){
@@ -37,7 +42,7 @@ shoppingCart.sort().reverse();
 console.log(shoppingCart);
 
 // Print the list of items in your shopping cart to the console as comma separated string.
-var stringCart = shoppingCart.join(",");
+var stringCart = shoppingCart.join(" ,");
 console.log(stringCart);
 
 
@@ -116,3 +121,9 @@ for(var i=0; course.students.length > i; i++){
     }
 }
 console.log(osxArray);
+
+
+// End exercise 2
+
+//////////////////// Exercise 3 \\\\\\\\\\\\\\\\\\\\\\
+
